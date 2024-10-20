@@ -7,11 +7,11 @@ plugins {
 
 
 android {
-    namespace = "com.plcoding.cryptotracker"
+    namespace = "com.aktasbdr.cryptotracker"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.plcoding.cryptotracker"
+        applicationId = "com.aktasbdr.cryptotracker"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
