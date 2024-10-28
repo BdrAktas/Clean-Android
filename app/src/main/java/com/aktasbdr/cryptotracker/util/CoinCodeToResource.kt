@@ -2,6 +2,7 @@ package com.aktasbdr.cryptotracker.util
 
 import com.aktasbdr.cryptotracker.R
 
+// bu API'daki coinlerin Drawable id'lerini dondurur
 fun getDrawableIdForCoin(symbol: String): Int {
     return when (symbol.uppercase()) {
         "1INCH" -> R.drawable._inch

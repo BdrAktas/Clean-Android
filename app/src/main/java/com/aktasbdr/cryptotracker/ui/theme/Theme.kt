@@ -8,6 +8,7 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
 private val lightScheme = lightColorScheme(
@@ -238,19 +239,40 @@ private val highContrastDarkColorScheme = darkColorScheme(
     surfaceContainerHighest = surfaceContainerHighestDarkHighContrast,
 )
 
+private val staticTheme = lightColorScheme(
+    primary = primaryColor,
+    //yazi tipi
+    onPrimary = onPrimaryColor,
+    primaryContainer = primaryContainerColor,
+    onPrimaryContainer = onPrimaryContainerColor,
+    secondary = secondaryColor,
+    onSecondary = onSecondaryColor,
+    secondaryContainer = secondaryContainerColor,
+    onSecondaryContainer = onSecondaryContainerColor,
+    error = errorColor,
+    onError = onErrorColor,
+    errorContainer = errorContainerColor,
+    onErrorContainer = onErrorContainerColor,
+    background = backgroundColor,
+    onBackground = onBackgroundColor,
+    surface = surfaceColor,
+    onSurface = onSurfaceColor
+)
+
 @Composable
 fun CryptoTrackerTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false,
+    useStaticTheme: Boolean = true,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
+        useStaticTheme -> staticTheme
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
-
         darkTheme -> highContrastDarkColorScheme
         else -> highContrastLightColorScheme
     }

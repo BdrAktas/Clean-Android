@@ -219,3 +219,21 @@ val surfaceContainerLowDarkHighContrast = Color(0xFF181D18)
 val surfaceContainerDarkHighContrast = Color(0xFF1C211B)
 val surfaceContainerHighDarkHighContrast = Color(0xFF272B26)
 val surfaceContainerHighestDarkHighContrast = Color(0xFF313630)
+
+//static icin
+val primaryColor = Color(0xFFFFFFFF) // Dark Blue
+val onPrimaryColor = Color(0xFFFFFFFF) // White
+val onErrorContainerColor = Color(0xFFF8F8F8) // Red
+val errorContainerColor = Color(0xFFD6301E) // Red
+val primaryContainerColor = Color(0xFF1B232E) // Dark Gray
+val onPrimaryContainerColor = Color(0xFFFFFFFF) // White
+val secondaryColor = Color(0xFF009C21) // Green
+val onSecondaryColor = Color(0xFFFFFFFF) // White
+val secondaryContainerColor = Color(0xFFD6301E) // Red
+val onSecondaryContainerColor = Color(0xFFFFFFFF) // White
+val errorColor = Color(0xFFD6301E) // Red
+val onErrorColor = Color(0xFFFFFFFF) // White
+val backgroundColor = Color(0xFF09101B) // Dark Blue
+val onBackgroundColor = Color(0xFFFFFFFF) // White
+val surfaceColor = Color(0xFF1B232E) // Dark Gray
+val onSurfaceColor = Color(0xFFFFFFFF) // White
