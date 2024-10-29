@@ -1,4 +1,4 @@
-package com.aktasbdr.cryptotracker.util
+package com.aktasbdr.cryptotracker.core.presentation.util
 
 import com.aktasbdr.cryptotracker.R
 

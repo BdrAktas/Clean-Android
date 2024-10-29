@@ -1,9 +1,18 @@
-package com.aktasbdr.cryptotracker.util
+package com.aktasbdr.cryptotracker.core.domain.util
 
 typealias DomainError = Error
 
+// Burdaki sealed Class kullanimi
+// Mesela Result ->Success ise Coin listesini donicek olacak
+//               ->Error ise Data layerden bu bilgiyi alicak(internet yok, server hata...) bunu Domain ustunden Presentation Layerine aktaricagiz
+
+// Result Classi ike tane Generic argumenti wrap ediyor
+// D: Data -> Successte list of Count ve  E: Error -> Sepesifik type of error
+// TODO : https://www.youtube.com/watch?v=MiLN2vs2Oe0 Error Handling Class detaylari
 sealed interface Result<out D, out E: Error> {
+//    val data nonnullable'dir
     data class Success<out D>(val data: D): Result<D, Nothing>
+//    val error nullable'dir
     data class Error<out E: DomainError>(val error: E): Result<Nothing, E>
 }
 
