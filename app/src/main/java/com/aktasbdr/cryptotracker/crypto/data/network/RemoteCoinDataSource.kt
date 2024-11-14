@@ -31,6 +31,8 @@ class RemoteCoinDataSource(
             // burda direk CoinDto modeli kullanamiyoruz onun yerine Coin modelini kullanacagiz
             // yoksa Domain layer buna bagli olucak o yuzde mappers kullanicagiz
             // it -> herbir eleman ->  CoinDto
+            //burdaki map fonksiyonu yukardaki Result dosyasindaki map fonksiyonunundan farkli olarak
+            // Kotlin'in extension functioni olan map fonksiyonudur
             response.data.map { it.toCoin() }
         }
     }
